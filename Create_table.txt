@@ -1,0 +1,128 @@
+create database QuanLyKhoKteam
+
+use QuanlyKhoKteam
+
+
+
+
+create table DonViTinh
+(
+	MaDVT int identity(1,1) primary key,
+	TenDonVi nvarchar(max)
+)
+
+
+create table NhaCungCap
+(
+	MaNCC int identity(1,1) primary key,
+	TenNCC nvarchar(max),
+	DiaChi nvarchar(max),
+	DienThoai nvarchar(20),
+	Email nvarchar(200),
+	
+	
+)
+
+
+create table KhachHang
+(
+	MaKH int identity(1,1) primary key,
+	TenKH nvarchar(max),
+	Diachi nvarchar(max),
+	DienThoai nvarchar(20),
+	Email nvarchar(200),
+	
+)
+
+
+create table MatHang
+(
+	MaMH nvarchar(128) primary key,
+	TenMH nvarchar(max),
+	MaDVT int not null,
+	MaNCC int not null,
+	QRCode nvarchar(max),
+	
+
+	foreign key(MaDVT) references DonViTinh(MaDVT),
+	foreign key(MaMH) references NhaCungCap(MaNCC),
+)
+
+
+create table TKNguoiDung
+(
+	MaTK int identity(1,1) primary key,
+	HoTenND nvarchar(max)
+)
+
+
+
+
+
+
+create table NguoiDung
+(
+	MaND int identity(1,1) primary key,
+	HoTenND nvarchar(max)
+	TaiKhoan nvarchar(100),
+	MatKhau nvarchar(max),
+	MaTK int not null
+
+	foreign key (MaTK) references TKNguoiDung(MaTK)
+)
+
+
+
+
+
+
+create table PhieuNhap
+(
+	MaPN nvarchar(128) primary key,
+	NgayNhap DateTime
+)
+
+
+create table ThongTinPN
+(
+	MaTTPN nvarchar(128) primary key,
+	MaMH nvarchar(128) not null,
+	MaPN nvarchar(128) not null,
+	So Luong int,
+	Gia Nhap Vao float default 0,
+	Gia Ban Ra float default 0,
+	Tinh trang hang nvarchar(max)
+
+
+	foreign key (MaMh) references MatHang(MaMH),
+	foreign key (MaPN) references PhieuNhap(MaPN)
+)
+
+
+create table PhieuXuat
+(
+	MaPX nvarchar(128) primary key,
+	NgayXuat DateTime
+)
+
+
+create table ThongTinPX
+(
+	MaTTPX nvarchar(128) primary key,
+        MaPX nvarchar(128) not null,
+	MaMH nvarchar(128) not null,
+	MaTTPN nvarchar(128) not null,
+	MaKH int not null,
+	SoLuong int,	
+	Tinh trang hang nvarchar(max)
+        
+        foreign key (MaPX) references PhieuXuat(MaPX)
+	foreign key (MaMH) references MatHang(MaMH),
+	foreign key (MaTTPN) references ThongTinPN(MaTTPN),
+	foreign key (MaKH) references KhachHang(MaKH)
+)
+
+/////////////////
+
+
+
