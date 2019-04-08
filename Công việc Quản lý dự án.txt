@@ -1,0 +1,6 @@
+﻿1. quyết định hình thành ý tưởng
+2. đặc tả bài toán
+3. Thiết kế form cho bài toán
+4. phân tích để thiết kế database
+5. lập trình database
+6. tiến hành lập trình, thao tác với cơ sở dữ liệu, hoàn thành dự án
