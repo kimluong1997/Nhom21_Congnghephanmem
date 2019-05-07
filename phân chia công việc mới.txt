@@ -1,0 +1,13 @@
+﻿1. về phần phân tích đặc tả bài toán, minh(nt) sẽ làm và bạn Kim Lương dựa vào đó để thiết kế database.
+2. sau khi có đặc tả bài toán thì sẽ thiết kế giao diện:
+công việc bao gồm:
+a. thiết kế màn hình đăng nhập: do minh làm
+b. thiết kế màn hình trang chính: do khoa làm
+c. thiết kế giao diện thêm sửa xóa do kim lương làm
+3. về phần thiết kế database, sau khi kim lương thiết kế data base xong thì minh và khoa sẽ có nhiệm vụ thêm dữ liệu vào
+4. về phần lập trình bao gồm:
+a. xử lý đăng nhập
+b. quản lý tồn kho
+c. thêm sửa xóa các Đơn vị, nhà cung cấp, đối tượng quản lý và người dùng.
+Mong các bạn làm theo, sang tháng chúng ta bảo vệ
+ 
