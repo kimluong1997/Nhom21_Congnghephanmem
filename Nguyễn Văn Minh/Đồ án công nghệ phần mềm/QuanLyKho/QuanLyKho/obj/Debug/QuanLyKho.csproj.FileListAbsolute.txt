@@ -70,3 +70,17 @@ D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phầ
 D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\bin\Debug\System.Windows.Interactivity.dll
 D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\bin\Debug\Microsoft.Expression.Interactions.xml
 D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\bin\Debug\System.Windows.Interactivity.xml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\UnitWindow.g.cs
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\UnitWindow.baml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\SuplierWindow.g.cs
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\SuplierWindow.baml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\CustomerWindow.g.cs
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\CustomerWindow.baml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\ObjectWindow.g.cs
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\ObjectWindow.baml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\UserWindow.g.cs
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\UserWindow.baml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\InputWindow.g.cs
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\OutputWindow.g.cs
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\InputWindow.baml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\OutputWindow.baml

@@ -1,0 +1,68 @@
+﻿<Window x:Class="QuanLyKho.UserWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:QuanLyKho.UserControllK56"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"       
+        ResizeMode="NoResize"
+        x:Name="window"
+        WindowStyle="None"
+        Title="Người dùng" Height="500" Width="700" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:UserControlBarUC Tag="{Binding Title,ElementName=window}"></uc:UserControlBarUC>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" ></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <materialDesign:Card Grid.Row="0" Margin="5">
+                <WrapPanel Margin="0 0 0 10">
+                    <TextBox Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên đăng nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <ComboBox ItemsSource="{Binding Role}" Margin="5 5 15 5" SelectedItem="{Binding selectedRole,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Quyền" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"></ComboBox>
+                    <TextBox Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên hiện thị" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                
+                </WrapPanel>
+            </materialDesign:Card>
+            <materialDesign:Card Grid.Row="1" Margin="5">
+                <WrapPanel>
+                    <Button Content="Thêm" Margin="5" Width="100" Command="{Binding AddCommand}"></Button>
+                    <Button Content="Sửa" Margin="5" Width="100" Command="{Binding editCommand}"></Button>
+                    <Button Content="Xóa" Margin="5" Width="100" Command="{Binding deleteCommand}"></Button>
+                    <Button Content="Đổi pass" Margin="5" Width="100" Command="{Binding ChangePasswordCommand}"></Button>
+                </WrapPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ListView ItemsSource="{Binding list}" SelectedItem="{Binding SelectedItem,Mode=OneWayToSource}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
+                                <GridViewColumn Header="Tên đăng nhập" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                                <GridViewColumn Header="Chức vụ" DisplayMemberBinding="{Binding Role}"></GridViewColumn>
+                                <GridViewColumn Header="Tên hiện thị" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
+                              
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </materialDesign:Card>
+
+        </Grid>
+
+    </Grid>
+</Window>
