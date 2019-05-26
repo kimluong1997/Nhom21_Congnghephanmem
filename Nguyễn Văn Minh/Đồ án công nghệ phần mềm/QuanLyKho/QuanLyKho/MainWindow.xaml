@@ -19,11 +19,11 @@
         ResizeMode="NoResize"
         WindowStyle="None"
  
-        Name="Manager"
+        x:Name="Manager"
         Title="Phần mềm quản lý kho" Height="500" Width="630" WindowStartupLocation="CenterScreen">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" />
+            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" CommandParameter="{Binding ElementName=Manager}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>

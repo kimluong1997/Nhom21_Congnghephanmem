@@ -84,3 +84,7 @@ D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phầ
 D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\OutputWindow.g.cs
 D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\InputWindow.baml
 D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\obj\Debug\OutputWindow.baml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\bin\Debug\EntityFramework.dll
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\bin\Debug\EntityFramework.SqlServer.dll
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\bin\Debug\EntityFramework.xml
+D:\Github\Nhom21_Congnghephanmem\Nguyễn Văn Minh\Đồ án công nghệ phần mềm\QuanLyKho\QuanLyKho\bin\Debug\EntityFramework.SqlServer.xml

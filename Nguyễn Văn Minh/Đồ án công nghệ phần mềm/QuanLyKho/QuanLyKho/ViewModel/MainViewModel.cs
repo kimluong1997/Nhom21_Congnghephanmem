@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKho.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,11 +25,13 @@ namespace QuanLyKho.ViewModel
         {
             if(!IsLoaded)
             {
-                LoadedWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+                LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
                 {
                     IsLoaded = true;
+                    p.Hide();
                     LoginWindow login = new LoginWindow();
                     login.ShowDialog();
+                    p.Show();
                 });
                 UnitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
@@ -73,6 +76,7 @@ namespace QuanLyKho.ViewModel
                     suplier.ShowDialog();
                 });
             }
+           
            
         }
     }

@@ -35,6 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -46,8 +54,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
@@ -80,6 +91,52 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Customer.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataProvider.cs" />
+    <Compile Include="Model\Input.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\InputInfo.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Object.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Output.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\OutputInfo.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QuanLyKho_Nhom21.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKho_Nhom21.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QuanLyKho_Nhom21.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QuanLyKho_Nhom21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKho_Nhom21.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Suplier.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Unit.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserRole.cs">
+      <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
+    </Compile>
     <Compile Include="ObjectWindow.xaml.cs">
       <DependentUpon>ObjectWindow.xaml</DependentUpon>
     </Compile>
@@ -100,6 +157,7 @@
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Page Include="CustomerWindow.xaml">
       <SubType>Designer</SubType>
@@ -172,6 +230,23 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\QuanLyKho_Nhom21.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyKho_Nhom21.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\QuanLyKho_Nhom21.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyKho_Nhom21.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKho_Nhom21.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model\QuanLyKho_Nhom21.edmx.diagram">
+      <DependentUpon>QuanLyKho_Nhom21.edmx</DependentUpon>
+    </None>
+    <None Include="Model\QuanLyKho_Nhom21.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyKho_Nhom21.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKho_Nhom21.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,8 +256,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Model\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
