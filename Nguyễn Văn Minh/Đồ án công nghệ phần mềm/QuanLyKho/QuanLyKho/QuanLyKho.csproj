@@ -128,6 +128,7 @@
     <Compile Include="Model\Suplier.cs">
       <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\TonKho.cs" />
     <Compile Include="Model\Unit.cs">
       <DependentUpon>QuanLyKho_Nhom21.tt</DependentUpon>
     </Compile>

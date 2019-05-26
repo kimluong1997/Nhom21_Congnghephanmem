@@ -1,6 +1,7 @@
 ﻿using QuanLyKho.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace QuanLyKho.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
+        private ObservableCollection<TonKho> _TonKhoList;
+        public ObservableCollection<TonKho> TonKhoList { get { return TonKhoList; } set { TonKhoList = value; OnPropertyChanged(); } }
         public bool IsLoaded = false;
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand UnitCommand { get; set; }
@@ -37,6 +40,7 @@ namespace QuanLyKho.ViewModel
                     if(LoginVM.IsLogin)
                     {
                         p.Show();
+                        LoadTonKhoData();
                     }
                     else
                     {
@@ -87,8 +91,11 @@ namespace QuanLyKho.ViewModel
                     suplier.ShowDialog();
                 });
             }
-           
-           
+        }
+        void LoadTonKhoData()
+        {
+            TonKhoList=new ObservableCollection<TonKho>();
+            DataProvider.Ins.DB.
         }
     }
 }
