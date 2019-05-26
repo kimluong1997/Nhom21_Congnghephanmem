@@ -28,10 +28,21 @@ namespace QuanLyKho.ViewModel
                 LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
                 {
                     IsLoaded = true;
+                    if (p == null) return;
                     p.Hide();
                     LoginWindow login = new LoginWindow();
                     login.ShowDialog();
-                    p.Show();
+                    if (login.DataContext == null) return;
+                    var LoginVM = login.DataContext as LoginViewModel;
+                    if(LoginVM.IsLogin)
+                    {
+                        p.Show();
+                    }
+                    else
+                    {
+                        p.Close();
+                    }
+                    
                 });
                 UnitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
                 {
