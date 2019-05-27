@@ -13,7 +13,7 @@
         ResizeMode="NoResize"
         x:Name="window"
         WindowStyle="None"
-        Title="Ngu?i dùng" Height="500" Width="700" WindowStartupLocation="CenterScreen">
+        Title="Ngu?i dÃ¹ng" Height="500" Width="700" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -30,18 +30,18 @@
             </Grid.RowDefinitions>
             <materialDesign:Card Grid.Row="0" Margin="5">
                 <WrapPanel Margin="0 0 0 10">
-                    <TextBox Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên dang nh?p" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="TÃªn dang nh?p" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                     <ComboBox ItemsSource="{Binding Role}" Margin="5 5 15 5" SelectedItem="{Binding selectedRole,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Quy?n" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"></ComboBox>
-                    <TextBox Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên hi?n th?" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="TÃªn hi?n th?" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 
                 </WrapPanel>
             </materialDesign:Card>
             <materialDesign:Card Grid.Row="1" Margin="5">
                 <WrapPanel>
-                    <Button Content="Thêm" Margin="5" Width="100" Command="{Binding AddCommand}"></Button>
+                    <Button Content="ThÃªm" Margin="5" Width="100" Command="{Binding AddCommand}"></Button>
                     <Button Content="S?a" Margin="5" Width="100" Command="{Binding editCommand}"></Button>
-                    <Button Content="Xóa" Margin="5" Width="100" Command="{Binding deleteCommand}"></Button>
-                    <Button Content="Ð?i pass" Margin="5" Width="100" Command="{Binding ChangePasswordCommand}"></Button>
+                    <Button Content="XÃ³a" Margin="5" Width="100" Command="{Binding deleteCommand}"></Button>
+                    <Button Content="Ã?i pass" Margin="5" Width="100" Command="{Binding ChangePasswordCommand}"></Button>
                 </WrapPanel>
             </materialDesign:Card>
 
@@ -51,9 +51,9 @@
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
-                                <GridViewColumn Header="Tên dang nh?p" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                                <GridViewColumn Header="TÃªn dang nh?p" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
                                 <GridViewColumn Header="Ch?c v?" DisplayMemberBinding="{Binding Role}"></GridViewColumn>
-                                <GridViewColumn Header="Tên hi?n th?" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
+                                <GridViewColumn Header="TÃªn hi?n th?" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
                               
 
                             </GridView>
