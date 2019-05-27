@@ -30,20 +30,20 @@
             </Grid.RowDefinitions>
             <materialDesign:Card Grid.Row="0" Margin="5">
                 <WrapPanel Margin="0 0 0 10">
-                    <TextBox Text="{Binding Object.DisplayName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên v?t tu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                    <DatePicker VerticalAlignment="Center" SelectedDate="{Binding DayOutnput}"  Margin="5 5 15 -7" Width="100" materialDesign:HintAssist.Hint="Ngày Xu?t" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                    <TextBox Text="{Binding Object.DisplayName,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="TÃªn v?t tu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <DatePicker VerticalAlignment="Center" SelectedDate="{Binding DayOutnput}"  Margin="5 5 15 -7" Width="100" materialDesign:HintAssist.Hint="NgÃ y Xu?t" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                     <TextBox Text="{Binding Count,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="S? lu?ng" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                    <TextBox Text="{Binding OutnputPrice,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Giá xu?t" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                    <TextBox Text="{Binding Status,UpdateSourceTrigger=PropertyChanged }" VerticalAlignment="Center" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tr?ng thái xu?t" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                    <ComboBox ItemsSource="{Binding Customer}" Margin="5 5 15 5" SelectedItem="{Binding selectedCustomer,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Khách hàng" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"></ComboBox>
+                    <TextBox Text="{Binding OutnputPrice,UpdateSourceTrigger=PropertyChanged }" Margin="5 5 15 5" materialDesign:HintAssist.Hint="GiÃ¡ xu?t" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Text="{Binding Status,UpdateSourceTrigger=PropertyChanged }" VerticalAlignment="Center" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tr?ng thÃ¡i xu?t" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <ComboBox ItemsSource="{Binding Customer}" Margin="5 5 15 5" SelectedItem="{Binding selectedCustomer,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="KhÃ¡ch hÃ ng" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"></ComboBox>
 
                 </WrapPanel>
             </materialDesign:Card>
             <materialDesign:Card Grid.Row="1" Margin="5">
                 <WrapPanel>
-                    <Button Content="Thêm" Margin="5" Width="100" Command="{Binding AddCommand}"></Button>
+                    <Button Content="ThÃªm" Margin="5" Width="100" Command="{Binding AddCommand}"></Button>
                     <Button Content="S?a" Margin="5" Width="100" Command="{Binding editCommand}"></Button>
-                    <Button Content="Xóa" Margin="5" Width="100" Command="{Binding deleteCommand}"></Button>
+                    <Button Content="XÃ³a" Margin="5" Width="100" Command="{Binding deleteCommand}"></Button>
                 </WrapPanel>
             </materialDesign:Card>
 
@@ -53,11 +53,11 @@
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="V?t tu" DisplayMemberBinding="{Binding Object.DisplayName}"></GridViewColumn>
-                                <GridViewColumn Header="Ngày nh?p" DisplayMemberBinding="{Binding Outnput.DayOutnput}"></GridViewColumn>
+                                <GridViewColumn Header="NgÃ y nh?p" DisplayMemberBinding="{Binding Outnput.DayOutnput}"></GridViewColumn>
                                 <GridViewColumn Header="S? lu?ng" DisplayMemberBinding="{Binding count}"></GridViewColumn>
-                                <GridViewColumn Header="Giá xu?t" DisplayMemberBinding="{Binding OutnputInfo.OnputPrice}"></GridViewColumn>
-                                <GridViewColumn Header="Khách hàng" DisplayMemberBinding="{Binding Customer.DisplayName}"></GridViewColumn>
-                                <GridViewColumn Header="Tr?ng thái xu?t" DisplayMemberBinding="{Binding Status}"></GridViewColumn>
+                                <GridViewColumn Header="GiÃ¡ xu?t" DisplayMemberBinding="{Binding OutnputInfo.OnputPrice}"></GridViewColumn>
+                                <GridViewColumn Header="KhÃ¡ch hÃ ng" DisplayMemberBinding="{Binding Customer.DisplayName}"></GridViewColumn>
+                                <GridViewColumn Header="Tr?ng thÃ¡i xu?t" DisplayMemberBinding="{Binding Status}"></GridViewColumn>
 
 
                             </GridView>
