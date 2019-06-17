@@ -95,7 +95,7 @@ namespace QuanLyKho.ViewModel
         void LoadTonKhoData()
         {
             TonKhoList=new ObservableCollection<TonKho>();
-            DataProvider.Ins.DB.
+           
         }
     }
 }
